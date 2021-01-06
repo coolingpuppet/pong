@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var SPEED = 400
+var SPEED = 600
 var Velocity = Vector2.ZERO
 
 
@@ -12,4 +12,4 @@ func _physics_process(delta):
 	else:
 		Velocity.y = 0
 		
-	Velocity = move_and_slide(Velocity)
+	move_and_slide(Velocity)

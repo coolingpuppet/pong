@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="PONG"
-run/main_scene="res://Levels/demo.tscn"
+run/main_scene="res://Levels/PlayerVSAI.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -41,8 +41,15 @@ player_down={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="opponent"
+2d_physics/layer_3="ball"
+2d_physics/layer_4="walls"
+
 [rendering]
 
 quality/2d/use_pixel_snap=true
-environment/default_clear_color=Color( 0.0941176, 0.0862745, 0.0862745, 1 )
+environment/default_clear_color=Color( 0.152941, 0.137255, 0.145098, 1 )
 environment/default_environment="res://default_env.tres"
