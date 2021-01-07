@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var SPEED = 600
+var SPEED = 400
 var Velocity = Vector2.ZERO
 
 

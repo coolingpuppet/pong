@@ -12,6 +12,9 @@ func _on_LeftWall_body_entered(body):
 	get_tree().call_group("BallGroup","stop_ball")
 	$CountdownTimer.start()
 	$UI/Clock.visible = true
+	$ScoreSound.play()
+	$player.position.x = 36
+	$OpponentAI.position.x = 1280-36
 
 
 func _on_RightWall2_body_entered(body):
@@ -20,6 +23,7 @@ func _on_RightWall2_body_entered(body):
 	get_tree().call_group("BallGroup","stop_ball")
 	$CountdownTimer.start()
 	$UI/Clock.visible = true
+	$ScoreSound.play()
 
 func _process(delta):
 	$UI/PlayerScore.text = str(player_score)
