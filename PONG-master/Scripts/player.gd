@@ -1,15 +1,18 @@
 extends KinematicBody2D
 
-var SPEED = 400
-var Velocity = Vector2.ZERO
+signal update
 
+export var SPEED = 25000
+var direction = Vector2()
+
+
+func _ready():
+	pass
+
+func _process(delta):
+	emit_signal("update")
 
 func _physics_process(delta):
-	if Input.is_action_pressed("player_up"):
-		Velocity.y = -SPEED
-	elif Input.is_action_pressed("player_down"):
-		Velocity.y = SPEED
-	else:
-		Velocity.y = 0
-		
-	move_and_slide(Velocity)
+	if direction.length() >0:
+		direction = direction.normalized() * SPEED
+		move_and_slide(direction * delta)

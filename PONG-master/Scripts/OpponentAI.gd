@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var SPEED = 400
+var SPEED = 350
 
 var ball
 
