@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 640, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16, 360 )
+
+[node name="Field" type="Node2D"]
+
+[node name="TopWall" type="StaticBody2D" parent="."]
+position = Vector2( 640, -16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopWall"]
+shape = SubResource( 1 )
+
+[node name="BottomWall" type="StaticBody2D" parent="."]
+position = Vector2( 640, 736 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomWall"]
+shape = SubResource( 1 )
+
+[node name="LeftWall" type="Area2D" parent="."]
+position = Vector2( -16, 360 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+shape = SubResource( 2 )
+
+[node name="LeftWall2" type="Area2D" parent="."]
+position = Vector2( 1296, 360 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall2"]
+shape = SubResource( 2 )
