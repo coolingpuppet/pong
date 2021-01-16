@@ -16,3 +16,4 @@ func _physics_process(delta):
 	if direction.length() > 0:
 		direction = direction.normalized() * move_speed
 		move_and_collide(direction*delta)
+		
