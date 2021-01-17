@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "AI_input_component",
+"language": "GDScript",
+"path": "res://Scripts/AI_input_conf.gd"
+}, {
+"base": "Node",
 "class": "player_input_component",
 "language": "GDScript",
 "path": "res://Scripts/player_input_conf.gd"
 } ]
 _global_script_class_icons={
+"AI_input_component": "",
 "player_input_component": ""
 }
 
@@ -45,6 +51,12 @@ move_down={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="ball"
+2d_physics/layer_3="Walls"
 
 [rendering]
 

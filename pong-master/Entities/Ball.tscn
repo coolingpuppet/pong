@@ -9,6 +9,8 @@
 radius = 16.0
 
 [node name="Ball" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -20,8 +22,8 @@ texture = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="WallHit" type="AudioStreamPlayer2D" parent="."]
+[node name="WallHit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
-[node name="RacketHit" type="AudioStreamPlayer2D" parent="."]
+[node name="RacketHit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
