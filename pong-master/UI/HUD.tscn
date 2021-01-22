@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Main_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Perfect DOS VGA 437 Win.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 84
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="HUD" type="Control"]
+margin_right = 1280.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerDisplay" type="PanelContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -58.0
+margin_bottom = 58.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="TimerDisplay"]
+margin_top = 20.0
+margin_right = 1280.0
+margin_bottom = 104.0
+
+[node name="Label" type="Label" parent="TimerDisplay/CenterContainer"]
+margin_left = 616.0
+margin_right = 663.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 2 )
+text = "3"
+
+[node name="ScoreDisplay" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+margin_top = 64.0
+margin_bottom = 76.0
+custom_constants/separation = 128
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player_Score" type="Label" parent="ScoreDisplay"]
+margin_left = 540.0
+margin_right = 576.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 3 )
+text = "1"
+
+[node name="Opponent_Score" type="Label" parent="ScoreDisplay"]
+margin_left = 704.0
+margin_right = 740.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 1 )
+text = "3"

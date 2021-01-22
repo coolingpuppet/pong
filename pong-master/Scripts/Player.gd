@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 signal update
 
-export var move_speed = 400
+export var move_speed = 500
 
 var direction = Vector2()
 
