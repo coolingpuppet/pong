@@ -38,6 +38,12 @@ func start_new_round():
 	hud.get_node("TimerDisplay").set_visible(true)
 	$StartTimer.start()
 
+func start_new_game():
+	score_player_one = 0
+	score_player_two = 0
+	update_score()
+	$FinalScreen.set_visible(false)
+	start_new_round()
 
 func _on_StartTimer_timeout():
 	hud.get_node("TimerDisplay").set_visible(false)
@@ -50,3 +56,11 @@ func update_score():
 func show_winner(message):
 	$FinalScreen.set_visible(true)
 	$FinalScreen.get_node("VBoxContainer/ResultMassage").set_text(message)
+
+
+func _on_FinalScreen_new_round():
+	start_new_game()
+
+
+func _on_FinalScreen_exit():
+	get_tree().quit()
