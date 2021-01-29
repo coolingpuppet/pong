@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Perfect DOS VGA 437 Win.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/FinalScreen.gd" type="Script" id=2]
@@ -15,8 +15,20 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
-size = 54
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.164706, 0.788235, 0.952941, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 38
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 1 )
@@ -32,46 +44,55 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_constants/separation = 64
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ResultMassage" type="Label" parent="VBoxContainer"]
-margin_top = 262.0
+margin_top = 213.0
 margin_right = 1280.0
-margin_bottom = 341.0
+margin_bottom = 292.0
 custom_fonts/font = SubResource( 1 )
 text = "Blue Won!!"
 align = 1
 
 [node name="AnotherRound" type="Label" parent="VBoxContainer"]
-margin_top = 345.0
+margin_top = 356.0
 margin_right = 1280.0
-margin_bottom = 393.0
+margin_bottom = 404.0
 custom_fonts/font = SubResource( 2 )
 text = "Wanna Play Another Round?"
 align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 397.0
+margin_top = 468.0
 margin_right = 1280.0
-margin_bottom = 458.0
-custom_constants/separation = 75
+margin_bottom = 507.0
+custom_constants/separation = 84
 alignment = 1
 
 [node name="NewButton" type="Button" parent="VBoxContainer/HBoxContainer"]
-margin_left = 320.0
-margin_right = 602.0
-margin_bottom = 61.0
-custom_fonts/font = SubResource( 3 )
+margin_left = 409.0
+margin_right = 598.0
+margin_bottom = 39.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 6 )
 text = "New Round"
 
 [node name="MenuButton" type="Button" parent="VBoxContainer/HBoxContainer"]
-margin_left = 677.0
-margin_right = 959.0
-margin_bottom = 61.0
-custom_fonts/font = SubResource( 3 )
+margin_left = 682.0
+margin_right = 871.0
+margin_bottom = 39.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 6 )
 text = "Main Menu"
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/NewButton" to="." method="_on_NewButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
