@@ -20,7 +20,7 @@ func _on_Field_goal_left():
 	if score_player_two < max_score:
 		start_new_round()
 	else:
-		show_winner("You Lost")
+		show_winner("Red Win!!")
 
 
 func _on_Field_goal_right():
@@ -29,12 +29,12 @@ func _on_Field_goal_right():
 	if score_player_one < max_score:
 		start_new_round()
 	else:
-		show_winner("You Win")
+		show_winner("Blue Win!!")
 
 func start_new_round():
 	$Ball.reset()
-	$Player.set_position(Vector2(64, 360))
-	$AI.set_position(Vector2(1216, 360))
+	$Player.set_position(Vector2(32, 360))
+	$AI.set_position(Vector2(1248, 360))
 	hud.get_node("TimerDisplay").set_visible(true)
 	$StartTimer.start()
 
@@ -63,4 +63,5 @@ func _on_FinalScreen_new_round():
 
 
 func _on_FinalScreen_exit():
-	get_tree().quit()
+	get_tree().change_scene("res://Scenes/MainMenu.tscn")
+	queue_free()

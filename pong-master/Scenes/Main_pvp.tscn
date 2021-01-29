@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/Field.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entities/Ball.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/player_input_conf.gd" type="Script" id=4]
-[ext_resource path="res://Scripts/AI_input_conf.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/player_two_input_conf.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/GameManager.gd" type="Script" id=6]
 [ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/FinalScreen.tscn" type="PackedScene" id=8]
@@ -25,9 +25,8 @@ script = ExtResource( 4 )
 modulate = Color( 0.952941, 0.309804, 0.431373, 1 )
 position = Vector2( 1248, 360 )
 
-[node name="AI_input_component" type="Node" parent="AI"]
+[node name="player_two_input_component" type="Node" parent="AI"]
 script = ExtResource( 5 )
-ball_path = NodePath("../../Ball")
 
 [node name="Ball" parent="." instance=ExtResource( 3 )]
 position = Vector2( 640, 384 )

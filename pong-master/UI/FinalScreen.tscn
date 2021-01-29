@@ -42,7 +42,7 @@ margin_top = 262.0
 margin_right = 1280.0
 margin_bottom = 341.0
 custom_fonts/font = SubResource( 1 )
-text = "You Won"
+text = "Blue Won!!"
 align = 1
 
 [node name="AnotherRound" type="Label" parent="VBoxContainer"]
