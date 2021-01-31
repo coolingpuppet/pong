@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export var initital_ball_speed = 450
-export var speed_commulator = 50
+export var speed_commulator = 70
 var ball_speed = initital_ball_speed
 
 var hit_counter = 0

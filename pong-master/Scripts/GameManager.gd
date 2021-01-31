@@ -4,7 +4,7 @@ onready var hud = get_node("HUD")
 
 var score_player_one = 0
 var score_player_two = 0
-var max_score = 3
+var max_score = 10
 
 func _ready():
 	update_score()

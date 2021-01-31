@@ -4,8 +4,8 @@
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 15.0
-height = 90.0
+radius = 14.9097
+height = 91.1925
 
 [node name="Player" type="KinematicBody2D" groups=[
 "rackets",
